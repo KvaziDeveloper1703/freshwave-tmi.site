@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7fbfa">
+  <meta name="description" content="FreshWave TMI — ammattitaitoista koti-, yritys- ja muuttosiivousta Helsingissä ja Uudellamaalla.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23e5f5f1'/%3E%3Cpath d='M9 31c11 0 11-9 23-9s12 9 23 9M9 44c11 0 11-9 23-9s12 9 23 9' fill='none' stroke='%230c8b8d' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <title>FreshWave TMI — Kotisiivous ja yrityssiivous Uudellamaalla</title>
+  <!-- Original site's public hero photo. If source goes offline, an inline illustration is shown. -->
+  <link rel="preconnect" href="https://freshwave-tmi.site" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;750;800;850&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://freshwave-tmi.site/assets/hero-EwLuLVo-.jpg" as="image">
+  <style>
+    :root {
+      --ink: #193c40;
+      --ink-soft: #587176;
+      --teal: #128b91;
+      --teal-deep: #087278;
+      --teal-pale: #e9f7f5;
+      --border: #deebe8;
+      --surface: #ffffff;
+      --canvas: #f7fbfa;
+      --soft-aqua: #d4eeea;
+      --radius: 20px;
+      --shadow: 0 18px 45px rgba(12, 66, 69, .07);
+    }
+    *, *::before, *::after {box-sizing:border-box}
+    html {scroll-behavior:smooth}
+    body {margin:0; min-width:320px; background:var(--canvas); color:var(--ink); font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
+    a {color:inherit; text-decoration:none}
+    button,input,textarea {font:inherit}
+    button {cursor:pointer}
+    button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible {outline:3px solid #5dcbc4;outline-offset:3px}
+    ::selection {background:#b8e9e1;color:#103c3b}
+    .skip-link {position:fixed;left:10px;top:-80px;z-index:999;background:#fff;border:2px solid var(--teal);padding:10px 16px;border-radius:8px}
+    .skip-link:focus {top:10px}
+    .container {width:min(1160px, calc(100% - 48px));margin-inline:auto}
+    .site-header {position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);border-bottom:1px solid rgba(212,229,226,.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+    .header-inner {height:82px;display:flex;align-items:center;gap:24px;justify-content:space-between}
+    .brand {display:inline-flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.65px;font-size:23px;white-space:nowrap}
+    .brand-icon {width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:13px;background:linear-gradient(135deg,#e0f7f2,#d4eeee);color:var(--teal)}
+    .brand-icon svg {width:28px;height:28px}
+    .brand-accent {color:var(--teal)}
+    .nav {display:flex;align-items:center;gap:34px;margin-left:auto}
+    .nav-link {position:relative;font-size:14px;font-weight:650;color:#597176;padding:12px 0;transition:color .2s}
+    .nav-link:hover,.nav-link[aria-current="page"] {color:var(--teal-deep)}
+    .nav-link[aria-current="page"]::after {content:"";position:absolute;left:0;right:0;bottom:3px;height:2px;border-radius:2px;background:var(--teal)}
+    .header-actions {display:flex;align-items:center;gap:18px;margin-left:20px}
+    .language-switch {display:flex;align-items:center;gap:3px;border:1px solid var(--border);border-radius:999px;background:#f6faf9;padding:4px;color:#8aa4a5;white-space:nowrap}
+    .language-switch button {border:0;background:none;color:#748f90;border-radius:999px;min-width:36px;min-height:30px;padding:5px 9px;font-size:12px;font-weight:800;transition:.2s}
+    .language-switch button.active {background:#fff;color:var(--teal-deep);box-shadow:0 2px 8px #1c5d5b20}
+    .language-switch .divider {font-size:12px;color:#b1c2c1}
+    .menu-toggle {display:none;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:12px;background:#fff;width:43px;height:43px;color:var(--ink)}
+    .menu-toggle svg {width:22px;height:22px}
+    main {min-height:calc(100vh - 310px)}
+    .hero {padding:77px 0 94px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 100% 26%, rgba(191,232,225,.31),transparent 35%),#f7fbfa}
+    .hero::before {content:"";position:absolute;right:-270px;top:-240px;width:710px;height:710px;border-radius:50%;background:radial-gradient(circle,#b8e7e04b,transparent 69%);pointer-events:none}
+    .hero-grid {display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:74px}
+    .eyebrow {display:inline-flex;align-items:center;gap:9px;color:var(--teal-deep);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1.45px;margin-bottom:24px}
+    .eyebrow::before {content:"";width:28px;height:2px;border-radius:2px;background:var(--teal)}
+    h1,h2,h3,p {margin-top:0}
+    .hero h1 {font-size:clamp(37px,4.4vw,62px);line-height:1.105;letter-spacing:-2.3px;margin-bottom:25px;font-weight:800;max-width:600px;text-wrap:balance}
+    .hero p {font-size:17px;line-height:1.86;max-width:520px;color:var(--ink-soft);margin-bottom:34px}
+    .hero-buttons,.cta-buttons {display:flex;flex-wrap:wrap;gap:13px;align-items:center}
+    .button {display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:13px 25px;border-radius:11px;font-size:14px;font-weight:750;border:1px solid transparent;transition:transform .2s,background .2s,box-shadow .2s;white-space:nowrap}
+    .button svg {width:18px;height:18px;flex-shrink:0}
+    .button:hover {transform:translateY(-2px)}
+    .button:active {transform:translateY(0)}
+    .button-primary {background:var(--teal);color:#fff;box-shadow:0 9px 22px #11929624}
+    .button-primary:hover {background:var(--teal-deep);box-shadow:0 13px 24px #11929635}
+    .button-outline {background:#fff;border-color:var(--border);color:var(--ink)}
+    .button-outline:hover {background:#eaf7f5;border-color:#c8e5de}
+    .hero-visual {position:relative;min-width:0}
+    .hero-image-wrap {position:relative;aspect-ratio: 1.04/1;border-radius:25px;overflow:hidden;box-shadow:0 29px 70px rgba(28,83,81,.18);background:linear-gradient(130deg,#c9e4df,#f8f4ee);isolation:isolate}
+    .hero-image-wrap img {position:absolute;inset:0;z-index:2;height:100%;width:100%;object-fit:cover;object-position:58% center;display:block;transition:transform .65s;background:#f6f9f7}
+    .hero-image-wrap img.image-failed {display:none}
+    .hero-image-fallback {position:absolute;inset:0;height:100%;width:100%;display:block;z-index:1}
+    .hero-image-wrap:hover img {transform:scale(1.035)}
+    .hero-visual::before {content:"";position:absolute;z-index:-1;inset:-18px 22px 18px -20px;border:2px solid #bee1da;border-radius:29px;transform:translate(25px,22px)}
+    .hero-bottom-accent {position:absolute;left:-29px;bottom:31px;width:91px;height:91px;border-radius:24px;background:#fff;box-shadow:0 12px 27px #1a545321;display:grid;place-items:center;color:var(--teal);transform:rotate(-7deg)}
+    .hero-bottom-accent svg {width:42px;height:42px;transform:rotate(7deg)}
+    .section {padding:86px 0}
+    .section-white {background:#fff}
+    .section-header {text-align:center;margin:0 auto 48px;max-width:650px}
+    .section-header h2,.page-intro h1 {font-size:clamp(32px,3.5vw,43px);letter-spacing:-1.35px;line-height:1.17;margin:0 0 18px;text-wrap:balance}
+    .section-header p,.page-intro p {font-size:16px;line-height:1.8;color:var(--ink-soft);margin:0}
+    .services-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px}
+    .service-card {border:1px solid #e3eeeb;background:#fff;border-radius:18px;padding:29px 24px 32px;box-shadow:0 5px 24px #114d4b07;transition:transform .2s,box-shadow .2s,border-color .2s;min-height:250px}
+    .service-card:hover {transform:translateY(-5px);box-shadow:var(--shadow);border-color:#bee5dd}
+    .service-icon {display:flex;align-items:center;justify-content:center;border-radius:15px;width:56px;height:56px;background:var(--teal-pale);color:var(--teal);margin-bottom:25px}
+    .service-icon svg {width:27px;height:27px;stroke-width:1.9}
+    .service-card h3 {font-size:18px;letter-spacing:-.5px;margin-bottom:12px}
+    .service-card p {font-size:14px;line-height:1.78;color:var(--ink-soft);margin:0}
+    .about-grid {display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}
+    .about-illustration {position:relative;min-height:370px;border-radius:24px;background:linear-gradient(145deg,#ddf2ed,#effaf7);display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .about-illustration::before {content:"";position:absolute;width:355px;height:355px;left:-120px;bottom:-190px;border:2px solid #ffffffaa;border-radius:50%;box-shadow:0 0 0 32px #ffffff33,0 0 0 65px #ffffff20}
+    .about-illustration::after {content:"";position:absolute;width:260px;height:260px;right:-90px;top:-130px;background:#b4e4db88;border-radius:50%}
+    .about-icon {width:210px;height:210px;z-index:1;filter:drop-shadow(0 18px 16px #218e8d20)}
+    .about-copy .eyebrow {margin-bottom:18px}
+    .about-copy h2 {font-size:clamp(31px,3.5vw,43px);line-height:1.22;letter-spacing:-1.2px;margin-bottom:27px}
+    .about-copy p,.prose p {font-size:15px;line-height:1.9;color:var(--ink-soft);margin-bottom:18px}
+    .about-copy p:last-child,.prose p:last-child {margin-bottom:0}
+    .cta-section {padding:76px 0;background:linear-gradient(115deg,#08767d,#15999a);color:#fff;position:relative;overflow:hidden}
+    .cta-section::before {content:"";position:absolute;width:510px;height:510px;border:1px solid #ffffff2c;border-radius:50%;left:-270px;top:-190px;box-shadow:0 0 0 55px #ffffff09,0 0 0 110px #ffffff08}
+    .cta-section::after {content:"";position:absolute;width:450px;height:450px;border:1px solid #ffffff2c;border-radius:50%;right:-180px;bottom:-270px;box-shadow:0 0 0 60px #ffffff0a}
+    .cta-inner {position:relative;z-index:1;text-align:center;max-width:780px;margin:auto}
+    .cta-inner h2 {font-size:clamp(29px,3.5vw,43px);line-height:1.2;letter-spacing:-1.15px;margin-bottom:17px}
+    .cta-inner p {color:#ddf6f3;font-size:16px;line-height:1.75;margin-bottom:29px}
+    .cta-buttons {justify-content:center}
+    .button-light {background:white;color:#08777d}
+    .button-light:hover {background:#edf9f5}
+    .button-glass {border-color:#ffffff7c;color:#fff;background:#ffffff0a}
+    .button-glass:hover {background:#ffffff21}
+    .site-footer {background:#143b3e;color:#d4e5e4;padding:34px 0}
+    .footer-inner {display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footer-brand {font-size:18px;font-weight:800;color:#fff;letter-spacing:-.4px}
+    .footer-meta {font-size:13px;color:#b8cecc;margin:8px 0 0}
+    .footer-copy {font-size:12px;color:#b8cecc}
+    .page-intro {text-align:center;padding:84px 0 60px;background:linear-gradient(180deg,#edf8f5 0%,#f7fbfa 100%)}
+    .page-intro .eyebrow {justify-content:center;margin-bottom:17px}
+    .page-intro .eyebrow::before {display:none}
+    .page-intro p {max-width:680px;margin:auto}
+    .inner-services {padding-top:54px;padding-bottom:102px}
+    .inner-services .services-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+    .inner-services .service-card {padding:34px}
+    .inner-services .service-card h3 {font-size:21px}
+    .inner-services .service-card p {font-size:15px}
+    .inner-about {padding:56px 0 106px}
+    .inner-about .about-grid {grid-template-columns:.85fr 1.15fr}
+    .contact-section {padding:48px 0 108px}
+    .contact-grid {display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start}
+    .contact-info,.contact-form {background:#fff;border:1px solid var(--border);border-radius:21px;padding:35px;box-shadow:0 6px 25px #104f4a0a}
+    .contact-info h2 {font-size:24px;letter-spacing:-.8px;margin-bottom:17px}
+    .contact-info>p {font-size:15px;line-height:1.75;color:var(--ink-soft);margin-bottom:32px}
+    .contact-line {display:flex;align-items:center;gap:13px;padding:13px 0;font-size:15px;font-weight:650;overflow-wrap:anywhere}
+    .contact-line svg {width:23px;height:23px;color:var(--teal);flex-shrink:0}
+    .contact-line:hover {color:var(--teal-deep)}
+    .field {margin-bottom:20px}
+    .field label {display:block;font-size:13px;font-weight:750;margin-bottom:9px;color:#36595a}
+    .field input,.field textarea {display:block;width:100%;background:#fbfdfc;border:1px solid #dbe9e6;border-radius:10px;padding:13px 15px;color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s}
+    .field input:focus,.field textarea:focus {border-color:var(--teal);box-shadow:0 0 0 3px #8bddcf35}
+    .field textarea {min-height:150px;resize:vertical}
+    .field-row {display:grid;grid-template-columns:1fr 1fr;gap:17px}
+    .form-status {font-size:13px;line-height:1.6;color:var(--ink-soft);margin:13px 0 0}
+    .contact-form .button {border:0}
+    @media(max-width:1030px) {
+      .hero-grid {gap:40px}
+      .services-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+      .about-grid {gap:48px}
+      .nav {gap:20px}
+      .header-actions {margin-left:0}
+    }
+    @media(max-width:750px) {
+      .container {width:min(100% - 34px,580px)}
+      .header-inner {height:70px}
+      .brand {font-size:20px}
+      .brand-icon {width:37px;height:37px}
+      .header-actions {gap:9px}
+      .menu-toggle {display:flex}
+      .nav {display:none;position:absolute;top:70px;left:0;right:0;margin:0;background:#fff;border-bottom:1px solid var(--border);padding:13px 24px 22px;box-shadow:0 13px 19px #194e4812;flex-direction:column;align-items:stretch;gap:1px}
+      .nav.open {display:flex}
+      .nav-link {padding:13px 4px}
+      .nav-link[aria-current="page"]::after {left:4px;right:auto;width:32px;bottom:5px}
+      .hero {padding:45px 0 71px}
+      .hero-grid {grid-template-columns:1fr;gap:42px}
+      .hero h1 {font-size:clamp(35px,9vw,48px);letter-spacing:-1.4px}
+      .hero p {font-size:16px;line-height:1.7}
+      .hero-image-wrap {aspect-ratio:1.35}
+      .hero-bottom-accent {width:70px;height:70px;left:-8px;bottom:-18px}
+      .hero-bottom-accent svg {width:33px;height:33px}
+      .section {padding:69px 0}
+      .section-header {margin-bottom:34px}
+      .about-grid,.inner-about .about-grid,.contact-grid {grid-template-columns:1fr;gap:32px}
+      .about-illustration {min-height:275px}
+      .about-icon {width:155px;height:155px}
+      .page-intro {padding:60px 0 48px}
+      .inner-services {padding:34px 0 70px}
+      .inner-about {padding:35px 0 72px}
+      .contact-section {padding:35px 0 75px}
+      .cta-section {padding:63px 0}
+    }
+    @media(max-width:480px) {
+      .language-switch button {min-width:31px;padding:5px 7px}
+      .services-grid,.inner-services .services-grid {grid-template-columns:1fr}
+      .service-card {padding:26px}
+      .inner-services .service-card {padding:27px}
+      .hero-buttons,.cta-buttons {align-items:stretch}
+      .hero-buttons .button {flex:1}
+      .field-row {grid-template-columns:1fr;gap:0}
+      .contact-info,.contact-form {padding:25px 21px}
+      .footer-inner {align-items:flex-start;flex-direction:column}
+    }
+    @media(min-width:1000px) and (prefers-reduced-motion:no-preference) {
+      .hero-content {animation:content-appear .55s both}
+      .hero-visual {animation:visual-appear .65s .08s both}
+      @keyframes content-appear {from{opacity:.3;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+      @keyframes visual-appear {from{opacity:.4;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    }
+    @media(prefers-reduced-motion:reduce) {
+      *,*::before,*::after {scroll-behavior:auto!important;transition:none!important;animation:none!important}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content / Siirry sisältöön</a>
+  <!-- One-file remake of FreshWave TMI. No frameworks or server-side routing required. -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" id="logo" href="#/fi/home" aria-label="FreshWave TMI">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 18c5.2 0 5.2-4.5 10.5-4.5S18.8 18 24 18s5.2-4.5 5.2-4.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><path d="M3 25c5.2 0 5.2-4.5 10.5-4.5S18.8 25 24 25s5.2-4.5 5.2-4.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><path d="M17 3c2.1 2.7 3.7 4.6 3.7 6.4a3.7 3.7 0 0 1-7.4 0C13.3 7.6 14.9 5.7 17 3Z" fill="currentColor" opacity=".62"/></svg>
+        </span>
+        <span>Fresh<span class="brand-accent">Wave</span> TMI</span>
+      </a>
+      <nav class="nav" id="navigation" aria-label="Main navigation"></nav>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="Choose language">
+          <button type="button" id="fi-switch" lang="fi" aria-label="Suomi">FI</button>
+          <span class="divider" aria-hidden="true">/</span>
+          <button type="button" id="en-switch" lang="en" aria-label="English">EN</button>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <noscript><p style="padding:1.5rem;text-align:center">FreshWave TMI — +358 44 955 9233 · freshwavetmi@gmail.com. Sivuston kielenvaihto vaatii JavaScriptin. / Language switching requires JavaScript.</p></noscript>
+  <footer class="site-footer" id="footer"></footer>
+
+  <script>
+  (() => {
+    'use strict';
+    const PHONE = '+358449559233';
+    const DISPLAY_PHONE = '+358 44 955 9233';
+    const EMAIL = 'freshwavetmi@gmail.com';
+    // Original site's image is loaded from the reference site when available.
+    const HERO_IMAGE = 'https://freshwave-tmi.site/assets/hero-EwLuLVo-.jpg';
+
+    const texts = {
+      fi: {
+        title: 'FreshWave TMI — Kotisiivous ja yrityssiivous Uudellamaalla',
+        titles: {home:'FreshWave TMI — Kotisiivous ja yrityssiivous Uudellamaalla', services:'Palvelut — FreshWave TMI', about:'Meistä — FreshWave TMI', contact:'Yhteystiedot — FreshWave TMI'},
+        nav:{home:'Etusivu',services:'Palvelut',about:'Meistä',contact:'Yhteystiedot'},
+        menu:'Avaa valikko', closeMenu:'Sulje valikko',
+        location:'Helsinki & Uusimaa',
+        heroTitle:'Ammattitaitoista siivouspalvelua Helsingissä ja Uudellamaalla',
+        heroDesc:'Koti-, toimisto- ja muuttosiivousta luotettavasti, huolellisesti ja ympäristöystävällisillä aineilla.',
+        quote:'Pyydä tarjous', learn:'Lue lisää',
+        servicesTitle:'Palvelumme',
+        servicesDesc:'Ammattimaista siivousta koteihin, toimistoihin ja kaikkeen siltä väliltä.',
+        services:[
+          {name:'Kotisiivous',desc:'Säännöllinen kotisiivous tai kertaluonteinen perussiivous, huolellisesti joka huone ja pinta huomioiden.'},
+          {name:'Yrityssiivous',desc:'Luotettavaa siivousta toimistoihin ja liiketiloihin joustavilla aikatauluilla, jotka sopivat liiketoimintaanne.'},
+          {name:'Muuttosiivous',desc:'Perusteellinen muuttosiivous, joka jättää vanhan kodin raikkaaksi ja puhtaaksi seuraavalle asukkaalle.'},
+          {name:'Ikkunanpesu',desc:'Ammattimainen ikkunanpesu kirkkaisiin ja raidattomiin lopputuloksiin, sisä- ja ulkopinnoille.'}
+        ],
+        aboutTitle:'Meistä',
+        aboutSubtitle:'Ammattitaitoista siivousta, johon voit luottaa.',
+        about:[
+          'FreshWave TMI on tarjonnut siivouspalveluja koko Uudellamaalla vuodesta 2024. Yhdistämme laadukkaan työn, ympäristöystävälliset aineet ja joustavan palvelun.',
+          'Asiakkaamme arvostavat huolellisuuttamme, läpinäkyvää hinnoittelua ja kunnioitusta jokaista kotia ja työpaikkaa kohtaan.',
+          'Meillä on täysi vakuutusturva ja sitoutumme luotettaviin, tasalaatuisiin tuloksiin.'
+        ],
+        ctaTitle:'Puhtaampi koti, raikkaampi arki',
+        ctaDesc:'Anna meidän huolehtia siivouksesta, niin voit käyttää aikasi siihen, mikä on sinulle tärkeintä.',
+        call:'Soita meille', contactTitle:'Ota yhteyttä',
+        contactDesc:'Kysy tarjousta tai varaa siivous. Vastaan yleensä saman arkipäivän aikana.',
+        contactInfoTitle:'Ota suoraan yhteyttä',
+        form:{name:'Nimi', email:'Sähköposti', phone:'Puhelin',message:'Viesti', submit:'Lähetä viesti',status:'Sähköpostisovelluksesi avautuu valmiilla viestillä. Tarkista viesti ja lähetä se sähköpostisovelluksesta.',subject:'Yhteydenotto FreshWave TMI -sivustolta',nameLabel:'Nimi',emailLabel:'Sähköposti',phoneLabel:'Puhelin',messageLabel:'Viesti'},
+        id:'Y-tunnus', rights:'Kaikki oikeudet pidätetään.',
+        meta:'Ammattitaitoista koti-, yritys- ja muuttosiivousta Helsingissä ja Uudellamaalla.'
+      },
+      en: {
+        title:'FreshWave TMI — Home & Office Cleaning in Uusimaa',
+        titles:{home:'FreshWave TMI — Home & Office Cleaning in Uusimaa',services:'Services — FreshWave TMI',about:'About — FreshWave TMI',contact:'Contact — FreshWave TMI'},
+        nav:{home:'Home',services:'Services',about:'About',contact:'Contact'},
+        menu:'Open menu',closeMenu:'Close menu',
+        location:'Helsinki & Uusimaa',
+        heroTitle:'Professional cleaning services in Helsinki and Uusimaa',
+        heroDesc:'Home, office, and move-out cleaning with reliable service, careful attention to detail, and eco-conscious products.',
+        quote:'Request a quote',learn:'Learn more',
+        servicesTitle:'Our Services',
+        servicesDesc:'Professional cleaning for homes, offices, and everything in between.',
+        services:[
+          {name:'Home Cleaning',desc:'Regular home cleaning or a one-time deep clean, with careful attention to every room and surface.'},
+          {name:'Office Cleaning',desc:'Reliable cleaning for offices and commercial spaces, with flexible schedules that work around your business.'},
+          {name:'Move-Out Cleaning',desc:'Thorough move-out cleaning to leave your old home fresh, spotless, and ready for the next resident.'},
+          {name:'Window Cleaning',desc:'Professional window cleaning for clear, streak-free results, including both interior and exterior glass.'}
+        ],
+        aboutTitle:'About Us',
+        aboutSubtitle:'Professional cleaning you can rely on.',
+        about:[
+          'FreshWave TMI has been providing cleaning services across Uusimaa since 2024. We combine high-quality work, eco-friendly products, and flexible service.',
+          'Our customers value our attention to detail, transparent pricing, and respect for every home and workplace.',
+          'We are fully insured and committed to delivering reliable, consistent results.'
+        ],
+        ctaTitle:'A cleaner home, a fresher everyday life',
+        ctaDesc:'Let us take care of the cleaning, so you can spend your time on what matters most.',
+        call:'Call us',contactTitle:'Contact Us',
+        contactDesc:'Ask for a quote or book a cleaning. I usually reply the same business day.',
+        contactInfoTitle:'Get in touch directly',
+        form:{name:'Name',email:'Email',phone:'Phone',message:'Message',submit:'Send message',status:'Your email application will open with a prefilled message. Review it and send it from your email application.',subject:'Inquiry from FreshWave TMI website',nameLabel:'Name',emailLabel:'Email',phoneLabel:'Phone',messageLabel:'Message'},
+        id:'Business ID',rights:'All rights reserved.',
+        meta:'Professional home, office and move-out cleaning in Helsinki and Uusimaa.'
+      }
+    };
+
+    // Fully self-contained fallback for the photograph. The original site image
+    // is loaded on top when available, matching the live design.
+    const heroFallback = `<svg class="hero-image-fallback" viewBox="0 0 780 730" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f7f2"/><stop offset="1" stop-color="#e6f1ee"/></linearGradient>
+        <linearGradient id="floor" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#d8bfa8"/><stop offset="1" stop-color="#c6a78c"/></linearGradient>
+        <linearGradient id="sky" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#e2f3f9"/><stop offset="1" stop-color="#f7fbf6"/></linearGradient>
+        <linearGradient id="sofa" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#dce6df"/></linearGradient>
+        <linearGradient id="art" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#aad7d4"/><stop offset="0.5" stop-color="#378c93"/><stop offset="1" stop-color="#0d6978"/></linearGradient>
+        <linearGradient id="rug" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9efe7"/><stop offset="0.5" stop-color="#bededc"/><stop offset="1" stop-color="#aacbc6"/></linearGradient>
+        <filter id="softshadow"><feGaussianBlur stdDeviation="14"/></filter>
+        <clipPath id="room"><rect width="780" height="730" rx="26"/></clipPath>
+      </defs>
+      <g clip-path="url(#room)">
+        <rect width="780" height="730" fill="url(#wall)"/>
+        <path d="M0 470 780 448V730H0Z" fill="url(#floor)"/>
+        <path d="M0 475 780 451" stroke="#ffffff" stroke-width="8" opacity=".68"/>
+        <path d="M0 535 780 482M0 643 780 551M260 455 280 730M490 453 590 730" stroke="#b9967c" stroke-width="3" opacity=".28"/>
+        <rect x="523" y="30" width="253" height="393" fill="#fdfcf8"/>
+        <rect x="546" y="44" width="209" height="338" rx="4" fill="url(#sky)"/>
+        <path d="M546 218c70-49 116-24 209-86v250H546Z" fill="#badcc5" opacity=".65"/>
+        <path d="M546 259c79-51 130-4 209-55v178H546Z" fill="#cfe0c0" opacity=".7"/>
+        <path d="M651 44v338M546 214h209" stroke="#fafaf6" stroke-width="12"/>
+        <path d="M530 30c-17 106 11 212-15 391M769 30c-22 87-5 221 13 371" fill="none" stroke="#fff" stroke-width="26" opacity=".78"/>
+        <rect x="275" y="145" width="178" height="148" rx="3" fill="#d4d5cf"/>
+        <rect x="285" y="153" width="159" height="129" fill="url(#art)"/>
+        <path d="M285 234c49-43 72-27 107-57 14-13 27-12 52-24M285 248c32-22 57-17 93-31 25-10 40-19 66-26" fill="none" stroke="#ebf5ec" stroke-width="15" opacity=".62"/>
+        <ellipse cx="440" cy="637" rx="275" ry="50" fill="#504c43" opacity=".17" filter="url(#softshadow)"/>
+        <path d="M112 601 470 524 751 647 374 730Z" fill="url(#rug)"/>
+        <path d="M130 610 479 542 723 646 374 709Z" fill="none" stroke="#f4f7f2" stroke-width="10" opacity=".45"/>
+        <g fill="#497e63" opacity=".9"><path d="M579 381c-77-82-64-130-33-154 18 64 22 112 33 154Z"/><path d="M579 379c-3-91 29-160 69-181 7 61-20 133-69 181Z"/><path d="M587 391c36-75 87-96 108-84-8 46-49 81-108 84Z"/><path d="M568 393c-62-44-88-39-107-22 25 42 66 51 107 22Z"/></g>
+        <path d="M575 376v108" stroke="#6e8a65" stroke-width="6"/>
+        <path d="M551 449h54l-9 57h-34Z" fill="#ecece6"/>
+        <ellipse cx="577" cy="449" rx="27" ry="5" fill="#becbc2"/>
+        <g>
+          <rect x="390" y="440" width="338" height="154" rx="28" fill="#bdc6bf" opacity=".38"/>
+          <rect x="406" y="416" width="312" height="125" rx="25" fill="url(#sofa)"/>
+          <rect x="386" y="465" width="75" height="142" rx="23" fill="#e9eeea"/>
+          <rect x="658" y="465" width="80" height="142" rx="24" fill="#e3eae5"/>
+          <rect x="428" y="517" width="274" height="83" rx="18" fill="#f3f6f2"/>
+          <path d="M550 521v75" stroke="#d9e2db" stroke-width="4"/>
+          <rect x="458" y="442" width="81" height="71" rx="16" fill="#a5d5d1" transform="rotate(-9 458 442)"/>
+          <rect x="557" y="439" width="70" height="73" rx="16" fill="#c7e5e1" transform="rotate(8 557 439)"/>
+          <path d="M413 591v42m300-42v42" stroke="#aab5ae" stroke-width="13" stroke-linecap="round"/>
+        </g>
+        <path d="M289 558h233l49 110H248Z" fill="#b98965"/>
+        <path d="M302 548h216l21 54H277Z" fill="#e6c8a6"/>
+        <path d="M286 600v83M528 600v83" stroke="#aa7c59" stroke-width="13"/>
+        <ellipse cx="410" cy="563" rx="44" ry="12" fill="#f8f7f1"/>
+        <path d="M395 558c-4-27 12-34 17-48 12 15 20 27 12 48" fill="#5aab92"/>
+        <path d="M411 550c-18-26-33-18-36-13 3 16 22 23 36 13Z" fill="#3b956f"/>
+        <path d="M413 550c18-28 34-20 35-13-3 17-21 24-35 13Z" fill="#69b68b"/>
+        <path d="M400 561h27l-5 18h-18Z" fill="#dfede9"/>
+        <rect x="0" y="0" width="780" height="730" fill="#fff" opacity=".045"/>
+      </g>
+    </svg>`;
+
+    const icons = {
+      arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>',
+      phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L7.2 10a16 16 0 0 0 6.8 6.8l1.5-1.8a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2Z"/></svg>',
+      mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg>',
+      home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z"/><path d="M9 21v-8h6v8"/><path d="m17 4 2-2"/></svg>',
+      office:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="1"/><path d="M9 21v-5h6v5M8 8h2m4 0h2M8 12h2m4 0h2"/></svg>',
+      move:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8 12 3l9 5v10l-9 5-9-5Z"/><path d="m3 8 9 5 9-5M12 13v10M7.5 5.5l9 5"/></svg>',
+      window:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M12 3v18M3 12h18M16.5 7l1-1M6.5 17l2-2"/></svg>',
+      sparkle:'<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M29 5C29 19 19 29 5 29c14 0 24 10 24 24 0-14 10-24 24-24C39 29 29 19 29 5Z" fill="#10888C"/><path d="M49 3c0 8-5 13-13 13 8 0 13 5 13 13 0-8 5-13 13-13-8 0-13-5-13-13Z" fill="#7ACFC1"/><circle cx="51" cy="47" r="6" fill="#99DDD0"/></svg>',
+      about:'<svg class="about-icon" viewBox="0 0 210 210" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="105" cy="105" r="87" fill="#fff" fill-opacity=".85"/><circle cx="105" cy="105" r="65" stroke="#A7DED3" stroke-width="2" stroke-dasharray="5 7"/><path d="M40 119c27 0 27-23 54-23s27 23 54 23 27-23 54-23" stroke="#0B868A" stroke-width="9" stroke-linecap="round"/><path d="M40 149c27 0 27-23 54-23s27 23 54 23 27-23 54-23" stroke="#7BCDC1" stroke-width="9" stroke-linecap="round"/><path d="M104 37c11 14 19 23 19 33a19 19 0 1 1-38 0c0-10 8-19 19-33Z" fill="#0B868A"/></svg>'
+    };
+
+    const sections=['home','services','about','contact'];
+    const navEl=document.getElementById('navigation');
+    const mainEl=document.getElementById('main');
+    const footerEl=document.getElementById('footer');
+    const menuBtn=document.getElementById('menu-toggle');
+    const fiBtn=document.getElementById('fi-switch');
+    const enBtn=document.getElementById('en-switch');
+    let state={lang:'fi',page:'home'};
+
+    function getUrl(lang=state.lang,page=state.page){return `#/${lang}/${page}`}
+    function getRoute(){
+      const match=location.hash.match(/^#\/(fi|en)(?:\/(home|services|about|contact))?\/?$/);
+      if(match)return {lang:match[1],page:match[2]||'home'};
+      let stored='fi';
+      try {stored=localStorage.getItem('freshwave-language')==='en'?'en':'fi'}catch(_error){}
+      return {lang:stored,page:'home'};
+    }
+    function setRoute(lang,page){
+      if(!texts[lang]||!sections.includes(page))return;
+      const url=getUrl(lang,page);
+      if(location.hash!==url)history.pushState(null,'',url);
+      render();
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+    function closeMenu(){
+      navEl.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.setAttribute('aria-label',texts[state.lang].menu);
+    }
+    function navLink(page,label,classes='nav-link'){
+      const current=state.page===page?' aria-current="page"':'';
+      return `<a class="${classes}" href="${getUrl(state.lang,page)}"${current}>${label}</a>`;
+    }
+    function pageIntro(title,desc){
+      const t=texts[state.lang];
+      return `<section class="page-intro"><div class="container"><div class="eyebrow">FreshWave TMI</div><h1>${title}</h1><p>${desc}</p></div></section>`;
+    }
+    function serviceCards(){
+      const t=texts[state.lang];
+      const iconNames=['home','office','move','window'];
+      return `<div class="services-grid">${t.services.map((s,i)=>`<article class="service-card"><div class="service-icon">${icons[iconNames[i]]}</div><h3>${s.name}</h3><p>${s.desc}</p></article>`).join('')}</div>`;
+    }
+    function aboutSection(isInner=false){
+      const t=texts[state.lang];
+      const copy=t.about.map(p=>`<p>${p}</p>`).join('');
+      return `<section class="section section-white ${isInner?'inner-about':''}"><div class="container about-grid"><div class="about-illustration">${icons.about}</div><div class="about-copy">${isInner?'':`<div class="eyebrow">${t.aboutTitle}</div><h2>${t.aboutSubtitle}</h2>`}<div class="prose">${copy}</div></div></div></section>`;
+    }
+    function ctaSection(){
+      const t=texts[state.lang];
+      return `<section class="cta-section"><div class="container cta-inner"><h2>${t.ctaTitle}</h2><p>${t.ctaDesc}</p><div class="cta-buttons"><a class="button button-light" href="${getUrl(state.lang,'contact')}">${t.quote} ${icons.arrow}</a><a class="button button-glass" href="tel:${PHONE}">${icons.phone}${t.call}</a></div></div></section>`;
+    }
+    function homePage(){
+      const t=texts[state.lang];
+      return `<section class="hero"><div class="container hero-grid"><div class="hero-content"><div class="eyebrow">${t.location}</div><h1>${t.heroTitle}</h1><p>${t.heroDesc}</p><div class="hero-buttons"><a class="button button-primary" href="${getUrl(state.lang,'contact')}">${t.quote} ${icons.arrow}</a><a class="button button-outline" href="${getUrl(state.lang,'services')}">${t.learn}</a></div></div><div class="hero-visual"><div class="hero-image-wrap">${heroFallback}<img src="${HERO_IMAGE}" alt="${state.lang==='fi'?'Raikas ja valoisa koti':'A fresh, bright and clean home'}" loading="eager" decoding="async" fetchpriority="high" referrerpolicy="no-referrer" onerror="this.classList.add('image-failed')"></div><div class="hero-bottom-accent">${icons.sparkle}</div></div></div></section><section class="section section-white"><div class="container"><div class="section-header"><h2>${t.servicesTitle}</h2><p>${t.servicesDesc}</p></div>${serviceCards()}</div></section>${aboutSection()}${ctaSection()}`;
+    }
+    function servicesPage(){const t=texts[state.lang];return `${pageIntro(t.servicesTitle,t.servicesDesc)}<section class="inner-services"><div class="container">${serviceCards()}</div></section>${ctaSection()}`}
+    function aboutPage(){const t=texts[state.lang];return `${pageIntro(t.aboutTitle,t.aboutSubtitle)}${aboutSection(true)}${ctaSection()}`}
+    function contactPage(){
+      const t=texts[state.lang],f=t.form;
+      return `${pageIntro(t.contactTitle,t.contactDesc)}<section class="contact-section"><div class="container contact-grid"><aside class="contact-info"><h2>${t.contactInfoTitle}</h2><p>${t.contactDesc}</p><a class="contact-line" href="tel:${PHONE}">${icons.phone}<span>${DISPLAY_PHONE}</span></a><a class="contact-line" href="mailto:${EMAIL}">${icons.mail}<span>${EMAIL}</span></a></aside><form class="contact-form" id="contact-form"><div class="field-row"><div class="field"><label for="contact-name">${f.name}</label><input id="contact-name" name="name" autocomplete="name" required maxlength="100"></div><div class="field"><label for="contact-email">${f.email}</label><input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="200"></div></div><div class="field"><label for="contact-phone">${f.phone}</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="60"></div><div class="field"><label for="contact-message">${f.message}</label><textarea id="contact-message" name="message" required maxlength="6000"></textarea></div><button class="button button-primary" type="submit">${f.submit} ${icons.arrow}</button><p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p></form></div></section>`;
+    }
+    function bindForm(){
+      const form=document.getElementById('contact-form');
+      if(!form)return;
+      form.addEventListener('submit',event=>{
+        event.preventDefault();
+        if(!form.reportValidity())return;
+        const f=texts[state.lang].form;
+        const d=new FormData(form);
+        const body=`${f.nameLabel}: ${d.get('name')}\n${f.emailLabel}: ${d.get('email')}\n${f.phoneLabel}: ${d.get('phone')||'-'}\n\n${f.messageLabel}:\n${d.get('message')}`;
+        const link=`mailto:${EMAIL}?subject=${encodeURIComponent(f.subject)}&body=${encodeURIComponent(body)}`;
+        const status=document.getElementById('form-status');
+        status.hidden=false;
+        status.textContent=f.status;
+        window.location.href=link;
+      });
+    }
+    function render(){
+      state=getRoute();
+      const t=texts[state.lang];
+      document.documentElement.lang=state.lang;
+      document.title=t.titles[state.page];
+      document.querySelector('meta[name="description"]').setAttribute('content',t.meta);
+      try {localStorage.setItem('freshwave-language',state.lang)}catch(_error){}
+      document.getElementById('logo').href=getUrl(state.lang,'home');
+      navEl.setAttribute('aria-label',state.lang==='fi'?'Päävalikko':'Main navigation');
+      navEl.innerHTML=sections.map(page=>navLink(page,t.nav[page])).join('');
+      fiBtn.classList.toggle('active',state.lang==='fi');
+      enBtn.classList.toggle('active',state.lang==='en');
+      fiBtn.setAttribute('aria-pressed',String(state.lang==='fi'));
+      enBtn.setAttribute('aria-pressed',String(state.lang==='en'));
+      closeMenu();
+      const pages={home:homePage,services:servicesPage,about:aboutPage,contact:contactPage};
+      mainEl.innerHTML=pages[state.page]();
+      footerEl.innerHTML=`<div class="container footer-inner"><div><a class="footer-brand" href="${getUrl(state.lang,'home')}">FreshWave TMI</a><p class="footer-meta">${t.id}: 3440383-6</p></div><div class="footer-copy">© 2026 FreshWave TMI. ${t.rights}</div></div>`;
+      bindForm();
+      window.scrollTo({top:0,behavior:'instant'});
+    }
+    document.querySelector('.skip-link').addEventListener('click', event => {
+      event.preventDefault();
+      mainEl.focus({preventScroll:true});
+      mainEl.scrollIntoView({behavior:'smooth'});
+    });
+    fiBtn.addEventListener('click',()=>setRoute('fi',state.page));
+    enBtn.addEventListener('click',()=>setRoute('en',state.page));
+    menuBtn.addEventListener('click',()=>{
+      const open=navEl.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',String(open));
+      menuBtn.setAttribute('aria-label',open?texts[state.lang].closeMenu:texts[state.lang].menu);
+    });
+    navEl.addEventListener('click',event=>{if(event.target.closest('a'))closeMenu()});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+    window.addEventListener('hashchange',render);
+    window.addEventListener('popstate',render);
+    render();
+  })();
+  </script>
+</body>
+</html>
